@@ -1,6 +1,12 @@
 name: Nabil CI/CD
 
-on: workflow_dispatch
+on: 
+    workflow_dispatch:
+      inputs:
+        build-and-push:
+          type: boolean
+          description: Wether i choose to build and push or not
+          default: true
   
 
 jobs:
