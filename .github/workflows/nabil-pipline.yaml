@@ -1,7 +1,7 @@
 name: Nabil CI/CD
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
+  
 
 jobs:
   checkout-and-test:
@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 20
 
-       - name: Install Dependencies
+      - name: Install Dependencies
         id: npm-ci
         run: npm ci
 
