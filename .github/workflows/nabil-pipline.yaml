@@ -41,6 +41,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: checkout-and-test
     steps:
+      - name: Failing build and push
+        if: ${{ !inputs.build-and-push}}
+        run: exit 1
       - name: Checkout
         id: checkout
         uses: actions/checkout@v4
