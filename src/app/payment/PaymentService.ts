@@ -14,10 +14,14 @@ export class PaymentService {
     }
 
     const result = this.paymentAdapter.processPayment(paymentDetails);
-
+    console.log(result);
+    
     if (result.status === 'success') {
+      console.log('hello');
       return `Payment successful. Transaction ID: ${result.transactionId}`;
+      
     } else {
+      console.log('error');
       throw new Error('Payment failed');
     }
   }
